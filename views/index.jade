@@ -5,12 +5,5 @@ block content
   p Welcome to #{title}
   div#initialContent
     = appData
-  button(type="button" id = "addBook") Add New Book
   div.app
-   script(id ="bookTemplate", type="text/template")
-    <a href = "#" class= "name"><%=name%></a> by <%=author%>
-   script(id ="detailedBookTemplate", type="text/template")
-    <h2><%=name%></h2>
-    <p>written by <%=author%></p>
-    <p>kept in <%=location%></p>
   div(style="display: none;")#example 

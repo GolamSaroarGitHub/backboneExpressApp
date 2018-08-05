@@ -10,13 +10,21 @@ define(["backbone", "events", "collections/book", "views/bookcollection","views/
       },
       routes: {
         "": "index",
-        "book/:id": "singleBook"
+        "book/:id": "singleBook",
+        "addnewbook": "addNewBook"
       },
       setupCollection: function() {
         if(this.collection) return;
         var data = $("#initialContent").html();
         this.collection = new BookCollection(JSON.parse(data));
       },
+      addNewBook: function(){
+        $(".app").html('');
+
+        var view = new AddNewBookView();
+        this. renderView(view);
+      },
+
       renderView: function(view) {
         $(".app").html(view.render().el);
       },
