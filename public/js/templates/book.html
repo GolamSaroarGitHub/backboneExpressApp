@@ -1,0 +1,22 @@
+<div>
+    <form action="">
+        <input type="text" value="add new book">
+        <button type="submit" value="New Book"></button>
+    </form>
+<script type="text/template" id = "bookTemplate">
+    <a href = "#" class= "name"><%=name%></a> by <%=author%>
+</script>
+<script type="text/template" id = "detailedBookTemplate">
+    <h2><%=name%></h2>
+    <p>written by<i> <%=author%></i></p>
+    <p>kept in <%=location%></p>
+</script>
+
+<script type="text/template" id = "addBookTemplate">
+    <form id='frmAddBook'>
+        <div>Book Name:</div> <input type='text' id='book_name' class='input' /><br />
+        <div>Written By:</div> <input type='text' id='author_name' class='input' /><br />
+        <div>Kept Location:</div> <input type='text' id='location_name' class='input' /><br />
+      </form>
+</script>
+</div>
